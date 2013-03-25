@@ -30,6 +30,10 @@ class IdealControlMessage;
 class EnbLtePhy :public LtePhy {
 public:
 	EnbLtePhy();
+	//the more versatile constructor where you can set the power as per your choice
+	// flag as 0 takes flag_val as power else takes flag_val as distance and converts to power
+	EnbLtePhy(int flag,float flag_val);
+	
 	virtual ~EnbLtePhy();
 
 	virtual void DoSetBandwidthManager (void);

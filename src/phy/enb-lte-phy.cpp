@@ -60,6 +60,27 @@ EnbLtePhy::EnbLtePhy()
   SetTxPower(43); //dBm
 }
 
+//the more versatile constructor where you can set the power as per your choice
+EnbLtePhy::EnbLtePhy(int flag,float flag_val)
+{
+  SetDevice(NULL);
+  SetDlChannel(NULL);
+  SetUlChannel(NULL);
+  SetBandwidthManager(NULL);
+  SetTxSignal (NULL);
+  SetErrorModel (NULL);
+  SetInterference (NULL);
+  //SetTxPower(43); //dBm
+  if(flag == 1){
+    SetTxPower(flag_val);
+  }
+  else{
+    int new_power = (int)flag_val*flag_val*43/16;
+    SetTxPower(new_power);
+  }
+  
+}
+
 EnbLtePhy::~EnbLtePhy()
 {
   Destroy ();

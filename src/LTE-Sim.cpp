@@ -84,7 +84,10 @@ main (int argc, char *argv[])
       /* Run simple scenario */
 	  if (strcmp(argv[1], "Simple")==0)
 	    {
-		  Simple ();
+		  float radx = atof(argv[2]);
+		  int flag = atoi(argv[3]);
+		  float flag_val = atof(argv[4]);
+		  Simple (radx,flag,flag_val);
 	    }
 
 

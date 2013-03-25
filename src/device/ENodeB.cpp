@@ -98,6 +98,36 @@ ENodeB::ENodeB (int idElement,
   SetClassifier (classifier);
 }
 
+ENodeB::ENodeB (int idElement,
+				Cell *cell,
+				double posx,
+				double posy,int flag,float flag_val)
+{
+  SetIDNetworkNode (idElement);
+  SetNodeType(NetworkNode::TYPE_ENODEB);
+  SetCell (cell);
+
+  CartesianCoordinates *position = new CartesianCoordinates(posx, posy);
+  Mobility* m = new ConstantPosition ();
+  m->SetAbsolutePosition (position);
+  SetMobilityModel (m);
+
+
+  m_userEquipmentRecords = new UserEquipmentRecords;
+  
+  //using extended constructor
+  EnbLtePhy *phy = new EnbLtePhy (flag,flag_val);
+  phy->SetDevice(this);
+  SetPhy (phy);
+
+  ProtocolStack *stack = new ProtocolStack (this);
+  SetProtocolStack (stack);
+
+  Classifier *classifier = new Classifier ();
+  classifier->SetDevice (this);
+  SetClassifier (classifier);
+}
+
 ENodeB::~ENodeB()
 {
   Destroy ();

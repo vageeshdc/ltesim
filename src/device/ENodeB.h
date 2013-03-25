@@ -87,7 +87,9 @@ public:
 	ENodeB ();
 	ENodeB (int idElement, Cell *cell);
 	ENodeB (int idElement, Cell *cell, double posx, double posy);
-
+	//exxtended constructor to allow phy layer to set variable power
+	ENodeB (int idElement, Cell *cell, double posx, double posy,int flag,float flag_val);
+	
 	virtual ~ENodeB();
 
     void RegisterUserEquipment (UserEquipment *UE);

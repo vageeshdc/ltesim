@@ -30,7 +30,7 @@
 #include "../device/ENodeB.h"
 
 
-static void Simple ()
+static void Simple (float radx,int flag,int flag_val)
 {
 
   // CREATE COMPONENT MANAGERS
@@ -51,7 +51,7 @@ static void Simple ()
 
   // CREATE CELL
   int idCell = 0;
-  int radius = 1; //km
+  int radius = (int)radx; //km
   int minDistance = 0.0035; //km
   int posX = 0;
   int posY = 0;
@@ -60,7 +60,8 @@ static void Simple ()
 
   //Create ENodeB
   int idEnb = 1;
-  ENodeB* enb = networkManager->CreateEnodeb (idEnb, cell, posX, posY, dlCh, ulCh, spectrum);
+  //here flag =1 means to use the flag_val as power else it is taken as distance to get power
+  ENodeB* enb = networkManager->CreateEnodebExtended (idEnb, cell, posX, posY, dlCh, ulCh, spectrum,flag,flag_val);
   enb->SetDLScheduler (ENodeB::DLScheduler_TYPE_PROPORTIONAL_FAIR);
 
 
@@ -70,9 +71,9 @@ static void Simple ()
 
   //Create UE
   int idUe = 2;
-  int posX_ue = 40; //m
+  int posX_ue = (int)(radx*1000.0-40.0);//40; //m
   int posY_ue = 0;  //m
-  int speed = 3;    //km/h
+  int speed = 0;    //km/h
   double speeDirection = 0;
   UserEquipment* ue = networkManager->CreateUserEquipment (idUe, posX_ue, posY_ue, speed, speeDirection, cell, enb);
 

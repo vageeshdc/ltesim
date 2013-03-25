@@ -124,6 +124,25 @@ NetworkManager::CreateEnodeb (int id,
   return enb;
 }
 
+//extended enodeB where one can set coustom power
+ENodeB*
+NetworkManager::CreateEnodebExtended (int id,
+		                      Cell* cell,
+		                      double pos_X, double pos_Y,
+		                      LteChannel *dlCh, LteChannel *ulCh,
+		                      BandwidthManager *bm,int flag,float flag_val)//flag to select power or radius
+{
+  ENodeB* enb = new ENodeB (id, cell, pos_X, pos_Y,flag,flag_val); //ENodeB (1, cell);
+  enb->GetPhy ()->SetDlChannel (dlCh);
+  enb->GetPhy ()->SetUlChannel (ulCh);
+  enb->GetPhy ()->SetBandwidthManager (bm);
+  ulCh->AddDevice (enb);
+
+  GetENodeBContainer ()->push_back (enb);
+
+  return enb;
+}
+
 Gateway*
 NetworkManager::CreateGateway (void)
 {

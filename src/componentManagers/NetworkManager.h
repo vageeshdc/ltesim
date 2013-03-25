@@ -170,6 +170,13 @@ public:
     		              double pos_X, double pos_Y,
     		              LteChannel *dlCh, LteChannel *ulCh,
     		              BandwidthManager *bm);
+    
+    //use this to create custom power enodeb/pico station
+    ENodeB* CreateEnodebExtended (int id,
+		                      Cell* cell,
+		                      double pos_X, double pos_Y,
+		                      LteChannel *dlCh, LteChannel *ulCh,
+		                      BandwidthManager *bm,int flag,float flag_val);
 
     Gateway* CreateGateway (void);
 
