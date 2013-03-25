@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/11/trunk/src/device/IPClassifier
+END
+Classifier.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/src/device/IPClassifier/Classifier.cpp
+END
+ClassifierParameters.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/11/trunk/src/device/IPClassifier/ClassifierParameters.cpp
+END
+Classifier.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/src/device/IPClassifier/Classifier.h
+END
+ClassifierParameters.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/11/trunk/src/device/IPClassifier/ClassifierParameters.h
+END

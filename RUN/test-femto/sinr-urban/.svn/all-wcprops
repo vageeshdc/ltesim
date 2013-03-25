@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/RUN/test-femto/sinr-urban
+END
+clear.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/11/trunk/RUN/test-femto/sinr-urban/clear.sh
+END
+post-sim.sh
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/11/trunk/RUN/test-femto/sinr-urban/post-sim.sh
+END
+run.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/RUN/test-femto/sinr-urban/run.sh
+END

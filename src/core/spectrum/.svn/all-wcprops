@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/11/trunk/src/core/spectrum
+END
+transmitted-signal.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/src/core/spectrum/transmitted-signal.h
+END
+bandwidth-manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/11/trunk/src/core/spectrum/bandwidth-manager.h
+END
+transmitted-signal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/src/core/spectrum/transmitted-signal.cpp
+END
+bandwidth-manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/src/core/spectrum/bandwidth-manager.cpp
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/11/trunk/src/phy/BLERTrace
+END
+BLERvsSINR_15CQI_TU.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/src/phy/BLERTrace/BLERvsSINR_15CQI_TU.h
+END
+BLERvsSINR_15CQI_AWGN.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/11/trunk/src/phy/BLERTrace/BLERvsSINR_15CQI_AWGN.h
+END

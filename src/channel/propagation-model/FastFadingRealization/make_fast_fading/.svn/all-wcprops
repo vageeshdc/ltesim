@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/make_fast_fading
+END
+make_ff_jakes.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/make_fast_fading/make_ff_jakes.m
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/make_fast_fading/README
+END
+LTE_init_generate_FF_tracev2.m
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/make_fast_fading/LTE_init_generate_FF_tracev2.m
+END
+make_ff_zheng.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/make_fast_fading/make_ff_zheng.m
+END

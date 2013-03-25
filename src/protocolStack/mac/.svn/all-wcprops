@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/11/trunk/src/protocolStack/mac
+END
+enb-mac-entity.cc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/enb-mac-entity.cc
+END
+mac-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/mac-entity.h
+END
+enb-mac-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/enb-mac-entity.h
+END
+harq-manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/harq-manager.cpp
+END
+henb-mac-entity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/henb-mac-entity.cpp
+END
+ue-mac-entity.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/ue-mac-entity.cc
+END
+AMCModule.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/AMCModule.cpp
+END
+ue-mac-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/ue-mac-entity.h
+END
+harq-manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/harq-manager.h
+END
+henb-mac-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/henb-mac-entity.h
+END
+AMCModule.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/AMCModule.h
+END
+mac-entity.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/11/trunk/src/protocolStack/mac/mac-entity.cc
+END

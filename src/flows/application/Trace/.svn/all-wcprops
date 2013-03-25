@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/src/flows/application/Trace
+END
+highway_H264_128k.dat
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/11/trunk/src/flows/application/Trace/highway_H264_128k.dat
+END
+foreman_H264_242k.dat
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/11/trunk/src/flows/application/Trace/foreman_H264_242k.dat
+END
+foreman_H264_440k.dat
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/11/trunk/src/flows/application/Trace/foreman_H264_440k.dat
+END
+mobile_H264_128k.dat
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/11/trunk/src/flows/application/Trace/mobile_H264_128k.dat
+END
+default-trace.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/11/trunk/src/flows/application/Trace/default-trace.h
+END
+foreman_H264_128k.dat
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/11/trunk/src/flows/application/Trace/foreman_H264_128k.dat
+END

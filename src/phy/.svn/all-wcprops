@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/11/trunk/src/phy
+END
+ue-lte-phy.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/11/trunk/src/phy/ue-lte-phy.h
+END
+henb-lte-phy.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/11/trunk/src/phy/henb-lte-phy.h
+END
+wideband-cqi-eesm-error-model.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/11/trunk/src/phy/wideband-cqi-eesm-error-model.cpp
+END
+wideband-cqi-eesm-error-model.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/src/phy/wideband-cqi-eesm-error-model.h
+END
+interference.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/11/trunk/src/phy/interference.cpp
+END
+interference.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/11/trunk/src/phy/interference.h
+END
+simple-error-model.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/src/phy/simple-error-model.cpp
+END
+lte-phy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/11/trunk/src/phy/lte-phy.cpp
+END
+simple-error-model.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/src/phy/simple-error-model.h
+END
+enb-lte-phy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/11/trunk/src/phy/enb-lte-phy.cpp
+END
+lte-phy.h
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/11/trunk/src/phy/lte-phy.h
+END
+error-model.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/11/trunk/src/phy/error-model.cpp
+END
+enb-lte-phy.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/11/trunk/src/phy/enb-lte-phy.h
+END
+ue-lte-phy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/11/trunk/src/phy/ue-lte-phy.cpp
+END
+henb-lte-phy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/11/trunk/src/phy/henb-lte-phy.cpp
+END
+error-model.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/11/trunk/src/phy/error-model.h
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/11/trunk/RUN/test-femto/throughput-urban
+END
+clear.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/RUN/test-femto/throughput-urban/clear.sh
+END
+post-sim.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/11/trunk/RUN/test-femto/throughput-urban/post-sim.sh
+END
+run.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/RUN/test-femto/throughput-urban/run.sh
+END

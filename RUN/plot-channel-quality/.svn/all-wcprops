@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/11/trunk/RUN/plot-channel-quality
+END
+clear.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/11/trunk/RUN/plot-channel-quality/clear.sh
+END
+plotSINR.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/11/trunk/RUN/plot-channel-quality/plotSINR.m
+END
+postSim.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/11/trunk/RUN/plot-channel-quality/postSim.sh
+END
+run.sh
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/11/trunk/RUN/plot-channel-quality/run.sh
+END

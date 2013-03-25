@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/src/protocolStack/protocols
+END
+TransportProtocol.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/11/trunk/src/protocolStack/protocols/TransportProtocol.cpp
+END
+TransportProtocol.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/11/trunk/src/protocolStack/protocols/TransportProtocol.h
+END

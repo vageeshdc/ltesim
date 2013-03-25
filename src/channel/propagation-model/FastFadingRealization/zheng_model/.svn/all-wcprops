@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model
+END
+fast-fading_VehB_speed_120.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehB_speed_120.h
+END
+fast-fading_VehB_speed_300.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehB_speed_300.h
+END
+fast-fading_PedB_speed_30.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedB_speed_30.h
+END
+fast-fading_VehB_speed_30.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehB_speed_30.h
+END
+fast-fading_PedA_speed_0.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedA_speed_0.h
+END
+fast-fading_PedB_speed_0.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedB_speed_0.h
+END
+fast-fading_PedA_speed_3.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedA_speed_3.h
+END
+fast-fading_PedB_speed_3.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedB_speed_3.h
+END
+fast-fading_PedA_speed_150.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedA_speed_150.h
+END
+fast-fading_PedB_speed_150.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedB_speed_150.h
+END
+fast-fading_PedA_speed_250.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedA_speed_250.h
+END
+fast-fading_PedB_speed_250.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedB_speed_250.h
+END
+fast-fading_PedA_speed_350.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedA_speed_350.h
+END
+fast-fading_PedB_speed_350.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedB_speed_350.h
+END
+fast-fading_VehA_speed_0.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehA_speed_0.h
+END
+fast-fading_VehB_speed_0.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehB_speed_0.h
+END
+fast-fading_VehA_speed_3.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehA_speed_3.h
+END
+fast-fading_VehB_speed_3.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehB_speed_3.h
+END
+fast-fading_VehA_speed_150.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehA_speed_150.h
+END
+fast-fading_VehA_speed_250.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehA_speed_250.h
+END
+fast-fading_VehB_speed_150.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehB_speed_150.h
+END
+fast-fading_VehB_speed_250.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehB_speed_250.h
+END
+fast-fading_VehA_speed_350.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehA_speed_350.h
+END
+fast-fading_PedA_speed_30.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedA_speed_30.h
+END
+fast-fading_VehB_speed_350.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehB_speed_350.h
+END
+fast-fading_VehA_speed_30.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehA_speed_30.h
+END
+fast-fading_PedA_speed_200.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedA_speed_200.h
+END
+fast-fading_PedB_speed_200.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedB_speed_200.h
+END
+fast-fading_PedA_speed_300.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedA_speed_300.h
+END
+fast-fading_PedA_speed_120.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedA_speed_120.h
+END
+fast-fading_PedB_speed_120.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedB_speed_120.h
+END
+fast-fading_PedB_speed_300.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_PedB_speed_300.h
+END
+fast-fading_VehA_speed_200.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehA_speed_200.h
+END
+fast-fading_VehB_speed_200.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehB_speed_200.h
+END
+fast-fading_VehA_speed_300.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehA_speed_300.h
+END
+fast-fading_VehA_speed_120.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/11/trunk/src/channel/propagation-model/FastFadingRealization/zheng_model/fast-fading_VehA_speed_120.h
+END

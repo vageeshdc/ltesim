@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/11/trunk/src/componentManagers
+END
+NetworkManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/src/componentManagers/NetworkManager.cpp
+END
+FrameManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/src/componentManagers/FrameManager.cpp
+END
+FlowsManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/src/componentManagers/FlowsManager.cpp
+END
+TDDConfiguration.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/src/componentManagers/TDDConfiguration.h
+END
+NetworkManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/src/componentManagers/NetworkManager.h
+END
+FlowsManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/src/componentManagers/FlowsManager.h
+END
+FrameManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/src/componentManagers/FrameManager.h
+END

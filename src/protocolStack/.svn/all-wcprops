@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/11/trunk/src/protocolStack
+END
+protocol-stack.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/src/protocolStack/protocol-stack.cpp
+END
+protocol-stack.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/11/trunk/src/protocolStack/protocol-stack.h
+END

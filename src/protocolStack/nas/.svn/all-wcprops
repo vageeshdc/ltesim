@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/11/trunk/src/protocolStack/nas
+END
+nas-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/11/trunk/src/protocolStack/nas/nas-entity.h
+END
+nas-entity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/src/protocolStack/nas/nas-entity.cpp
+END

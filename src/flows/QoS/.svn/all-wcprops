@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/11/trunk/src/flows/QoS
+END
+QoSForFLS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/src/flows/QoS/QoSForFLS.cpp
+END
+QoSForM_LWDF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/src/flows/QoS/QoSForM_LWDF.cpp
+END
+QoSForFLS.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/src/flows/QoS/QoSForFLS.h
+END
+QoSParameters.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/11/trunk/src/flows/QoS/QoSParameters.cpp
+END
+QoSForEXP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/src/flows/QoS/QoSForEXP.cpp
+END
+QoSForM_LWDF.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/src/flows/QoS/QoSForM_LWDF.h
+END
+QoSParameters.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/11/trunk/src/flows/QoS/QoSParameters.h
+END
+QoSForEXP.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/src/flows/QoS/QoSForEXP.h
+END
