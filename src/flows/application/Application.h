@@ -74,6 +74,9 @@ public:
 	void SetDestination (NetworkNode *destination);
 	int GetSourcePort (void) const;
 	void SetSourcePort (int port);
+	
+	Application* setDestApplication (Application* a);
+	
 	int GetDestinationPort (void) const;
     void SetDestinationPort (int port);
     TransportProtocol::TransportProtocolType GetTransportProtocol (void) const;
@@ -103,6 +106,7 @@ public:
 private:
 	ApplicationType m_applicationType;
 
+	Application* m_destApplication;
 	NetworkNode *m_source;
 	NetworkNode *m_destination;
 	int m_sourcePort;

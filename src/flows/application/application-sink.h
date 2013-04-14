@@ -26,6 +26,11 @@
 #include <iostream>
 #include <stdint.h>
 #include "Application.h"
+#include "VoIP.h"
+#include "InfiniteBuffer.h"
+#include "TraceBased.h"
+#include "WEB.h"
+#include "CBR.h"
 
 class ClassifierParameters;
 class RadioBearer;
@@ -45,6 +50,7 @@ public:
 	RadioBearerSink* GetRadioBearerSink (void);
 
 	void SetSourceApplication (Application* a);
+	void SetDestApplication (Application* a);
 	Application* GetSourceApplication (void);
 
 	void Receive (Packet* p);
@@ -52,7 +58,7 @@ public:
 private:
 	ClassifierParameters* m_classifierParameters;
 	RadioBearerSink* m_radioBearer;
-
+	Application* m_destApplication;
 	Application* m_sourceApplication;
 };
 

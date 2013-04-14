@@ -126,6 +126,10 @@ Application::Start ()
   m_applicationSink = new ApplicationSink ();
   m_applicationSink->SetClassifierParameters (GetClassifierParameters ());
   m_applicationSink->SetSourceApplication (this);
+  
+  if(GetDestination()->isRelay){
+    m_applicationSink->SetDestApplication(m_destApplication);
+  }
 
 
   // 3 - create radio bearer sink
@@ -192,7 +196,11 @@ Application::Start ()
 		  << m_radioBearer->GetDestination () ->GetIDNetworkNode ()<< std::endl;
 #endif
 
-  DoStart ();
+  if(GetDestination()->isRelay){
+  
+  }else{
+    DoStart ();
+  }
 }
 
 void
@@ -260,6 +268,13 @@ Application::GetSource (void)
 {
   return m_source;
 }
+
+Application*
+Application::setDestApplication (Application* a)
+{
+  m_destApplication = a;
+}
+
 
 NetworkNode*
 Application::GetDestination (void)

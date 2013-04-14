@@ -57,6 +57,42 @@ CBR::ScheduleTransmit (double time)
 }
 
 void
+CBR::Send (Packet* pRed)
+{
+  //CREATE A NEW PACKET (ADDING UDP, IP and PDCP HEADERS)
+  Packet *packet = pRed->Copy();//new Packet ();
+  int uid = Simulator::Init()->GetUID ();
+
+  packet->SetID(uid);
+  packet->SetTimeStamp (Simulator::Init()->Now ());
+  packet->SetSize (GetSize ());
+
+  PacketTAGs *tags = new PacketTAGs ();
+  tags->SetApplicationType(PacketTAGs::APPLICATION_TYPE_CBR);
+  tags->SetApplicationSize (packet->GetSize ());
+  packet->SetPacketTags(tags);
+
+
+  UDPHeader *udp = new UDPHeader (GetClassifierParameters ()->GetSourcePort (),
+		                          GetClassifierParameters ()->GetDestinationPort ());
+  packet->AddUDPHeader (udp);
+
+  IPHeader *ip = new IPHeader (GetClassifierParameters ()->GetSourceID (),
+                               GetClassifierParameters ()->GetDestinationID ());
+  packet->AddIPHeader (ip);
+
+  PDCPHeader *pdcp = new PDCPHeader ();
+  packet->AddPDCPHeader (pdcp);
+
+  Trace (packet);
+
+  GetRadioBearer()->Enqueue (packet);
+
+  //ScheduleTransmit (GetInterval ());
+
+}
+
+void
 CBR::Send (void)
 {
   //CREATE A NEW PACKET (ADDING UDP, IP and PDCP HEADERS)

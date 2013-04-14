@@ -32,6 +32,7 @@ class PacketScheduler;
 
 class ENodeB : public NetworkNode {
 public:
+  
 	struct UserEquipmentRecord
 	  {
 		UserEquipmentRecord ();
@@ -86,6 +87,7 @@ public:
 
 	ENodeB ();
 	ENodeB (int idElement, Cell *cell);
+	ENodeB (int idElement, Cell *cell,int flag,int flagval);
 	ENodeB (int idElement, Cell *cell, double posx, double posy);
 	//exxtended constructor to allow phy layer to set variable power
 	ENodeB (int idElement, Cell *cell, double posx, double posy,int flag,float flag_val);

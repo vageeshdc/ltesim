@@ -43,6 +43,10 @@ class LtePhy;
 
 class NetworkNode {
 public:
+  
+	bool isRelay;//use this to set as relay or not..
+	int relayID;//use this to tie this as realy ID
+	
 	enum NodeState
 	  {
 		STATE_DETACHED,

@@ -40,9 +40,14 @@
 #include "scenarios/single-cell-with-interference.h"
 #include "scenarios/single-cell-with-femto.h"
 #include "scenarios/multi-cell.h"
+#include "scenarios/multi-picocell.h"
 #include "scenarios/single-cell-with-streets.h"
 #include "scenarios/multi-cell-sinrplot.h"
 #include "TEST/scalability-test-macro-with-femto.h"
+#include "scenarios/multiUlcell.h"
+#include "scenarios/multiUlDl.h"
+#include "scenarios/multiUlDlbkp.h"
+#include "scenarios/test-uplink-channel-quality.h"
 #include "TEST/test-sinr-femto.h"
 #include "TEST/test-throughput-macro-with-femto.h"
 #include "TEST/test-sinr-urban.h"
@@ -50,7 +55,6 @@
 #include "TEST/test-throughput-building.h"
 #include "TEST/test-uplink-fme.h"
 #include "TEST/test-uplink-channel-quality.h"
-
 
 #include "utility/help.h"
 #include <iostream>
@@ -89,15 +93,124 @@ main (int argc, char *argv[])
 		  float flag_val = atof(argv[4]);
 		  Simple (radx,flag,flag_val);
 	    }
+         if(strcmp(argv[1], "testUlChq")==0){
 
+	   UplinkChannelQuality();                 
+	 }
 
-
-
-
-
-
-
-
+	 if (strcmp(argv[1], "SingleCellPico")==0)
+		{
+		  /*
+		   * 
+		   * double radius,int nbFemtoCells,
+                       int nbUE, int nbFemtoUE,
+                       int nbVoIP, int nbVideo, int nbBE, int nbCBR,
+                       int sched_type,
+                       int frame_struct,
+                       int speed, int accessPolicy,
+		               double maxDelay, int videoBitRate,
+                       int seed
+		   */
+		  double radius = atof(argv[2]);
+		  int nbFemtoCells = atoi(argv[3]);
+		  int nbUE = atoi(argv[4]);
+		  int nbFemtoUE = atoi(argv[5]);
+		  int nbVoIP = atoi(argv[6]);
+		  int nbVideo = atoi(argv[7]);
+		  int nbBE = atoi(argv[8]);
+		  int nbCBR = atoi(argv[9]);
+		  int sched_type = atoi(argv[10]);
+		  int frame_struct = atoi(argv[11]);
+		  int speed = atoi(argv[12]);
+		  int accessPolicy = atoi(argv[13]);
+		  double maxDelay = atof(argv[14]);
+		  int video_bit_rate = atoi(argv[15]);
+		  int seed;
+		  if (argc==17) seed = atoi(argv[16]);
+		  else seed = -1;
+	 SingleCellWithPico(radius,nbFemtoCells, nbUE, nbFemtoUE, nbVoIP, nbVideo, nbBE, nbCBR, sched_type, frame_struct, speed, accessPolicy, maxDelay, video_bit_rate, seed);
+		}
+	 if(strcmp(argv[1], "multiUlCell")==0){
+	   
+	   int nbCell = atof(argv[2]);
+	   double radius = atof(argv[3]);
+	      int nbUE = atoi(argv[4]);
+	      int nbVoIP = atoi(argv[5]);
+	      int nbVideo = atoi(argv[6]);
+	      int nbBE = atoi(argv[7]);
+	      int nbCBR = atoi(argv[8]);
+	      int sched_type = atoi(argv[9]);
+	      int frame_struct = atoi(argv[10]);
+	      int speed = atoi(argv[11]);
+	      double maxDelay = atof(argv[12]);
+		  int videoBitRate = atoi(argv[13]);
+	      int seed;
+	      if (argc==15) seed = atoi(argv[14]);
+	      else seed = -1;
+	   MultiUlCell (nbCell,radius,
+                       nbUE,
+                       nbVoIP,nbVideo,nbBE,nbCBR,
+                       sched_type,
+                       frame_struct,
+                       speed,
+		       maxDelay,videoBitRate,
+                        seed);
+	 }
+	  if(strcmp(argv[1], "multiUlDl")==0){
+	   
+	   int nbCell = atof(argv[2]);
+	   double radius = atof(argv[3]);
+	      int nbUE = atoi(argv[4]);
+	      int nbVoIP = atoi(argv[5]);
+	      int nbVideo = atoi(argv[6]);
+	      int nbBE = atoi(argv[7]);
+	      int nbCBR = atoi(argv[8]);
+	      int sched_typeu = atoi(argv[9]);
+	      int sched_typed = atoi(argv[10]);
+	      int frame_struct = atoi(argv[11]);
+	      int speed = atoi(argv[12]);
+	      double maxDelay = atof(argv[13]);
+		  int videoBitRate = atoi(argv[14]);
+	      int seed;
+	      if (argc==16) seed = atoi(argv[15]);
+	      else seed = -1;
+	   MultiUlDl (nbCell,radius,
+                       nbUE,
+                       nbVoIP,nbVideo,nbBE,nbCBR,
+                       sched_typeu,//sched_typed,
+                       frame_struct,
+                       speed,
+		       maxDelay,videoBitRate,
+                        seed);
+	 }
+	 if(strcmp(argv[1], "multiUlDlbkp")==0){
+	   
+	   int nbCell = atof(argv[2]);
+	   double radius = atof(argv[3]);
+	      int nbUE = atoi(argv[4]);
+	      int nbVoIP = atoi(argv[5]);
+	      int nbVideo = atoi(argv[6]);
+	      int nbBE = atoi(argv[7]);
+	      int nbCBR = atoi(argv[8]);
+	      int sched_typeu = atoi(argv[9]);
+	      int sched_typed = atoi(argv[10]);
+	      int frame_struct = atoi(argv[11]);
+	      int speed = atoi(argv[12]);
+	      double maxDelay = atof(argv[13]);
+		  int videoBitRate = atoi(argv[14]);
+	      int seed;
+	      if (argc==16) seed = atoi(argv[15]);
+	      else seed = -1;
+	   MultiUlDlbkp (nbCell,radius,
+                       nbUE,
+                       nbVoIP,nbVideo,nbBE,nbCBR,
+                       sched_typeu,sched_typed,
+                       frame_struct,
+                       speed,
+		       maxDelay,videoBitRate,
+                        seed);
+	 }
+	 
       /* Run more complex scenarios */
 	  if (strcmp(argv[1], "SingleCell")==0)
 	    {
@@ -158,10 +271,11 @@ main (int argc, char *argv[])
 
 	  if (strcmp(argv[1], "SingleCellWithFemto")==0)
 		{
-		  int nbBuilding = atoi(argv[2]);
-		  int buildingType = atoi(argv[3]);
-		  double activityRatio = atof(argv[4]);
-		  double radius = atof(argv[5]);
+		  double radius = atof(argv[2]);
+		  int nbBuilding = atoi(argv[3]);
+		  int buildingType = atoi(argv[4]);
+		  double activityRatio = atof(argv[5]);
+		  
 		  int nbUE = atoi(argv[6]);
 		  int nbFemtoUE = atoi(argv[7]);
 		  int nbVoIP = atoi(argv[8]);
@@ -177,7 +291,7 @@ main (int argc, char *argv[])
 		  int seed;
 		  if (argc==19) seed = atoi(argv[18]);
 		  else seed = -1;
-		  SingleCellWithFemto ( nbBuilding, buildingType, activityRatio, radius, nbUE, nbFemtoUE, nbVoIP, nbVideo, nbBE, nbCBR, sched_type, frame_struct, speed, accessPolicy, maxDelay, video_bit_rate, seed);
+		  SingleCellWithFemto (radius, nbBuilding, buildingType, activityRatio,  nbUE, nbFemtoUE, nbVoIP, nbVideo, nbBE, nbCBR, sched_type, frame_struct, speed, accessPolicy, maxDelay, video_bit_rate, seed);
 		}
 	  if (strcmp(argv[1], "SingleCellWithStreets")==0)
 		{

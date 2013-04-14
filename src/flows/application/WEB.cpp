@@ -218,6 +218,57 @@ WEB::ScheduleTransmit (double time)
 }
 
 void
+WEB::Send (Packet* pRed)
+{
+  if (!m_stateON)
+	{
+	  m_stateON = true;
+	  //start state ON
+
+          int n_packet = Ran.Geometric(300);
+          arrival = Ran.Geometric(0.4);
+	 // double random = rand() %10000;
+	  m_stateDuration = n_packet * arrival;
+	  m_endState = Simulator::Init()->Now () + m_stateDuration;
+#ifdef APPLICATION_DEBUG
+	  std::cout << " WEB_DEBUG - Start ON Period, "
+	      "\n\t Time = " << Simulator::Init()->Now ()
+		  << "\n\t state ON Duration = " << m_stateDuration
+		  << "\n\t end ON state = " <<  m_endState << std::endl;
+#endif
+	}
+
+  //CREATE A NEW PACKET (ADDING UDP, IP and PDCP HEADERS)
+  Packet *packet = pRed->Copy();//new Packet ();
+  int uid = Simulator::Init()->GetUID ();
+
+  packet->SetID(uid);
+  packet->SetTimeStamp (Simulator::Init()->Now ());
+  packet->SetSize (GetSize ());
+
+  Trace (packet);
+
+  PacketTAGs *tags = new PacketTAGs ();
+  tags->SetApplicationType(PacketTAGs::APPLICATION_TYPE_WEB);
+  tags->SetApplicationSize (packet->GetSize ());
+  packet->SetPacketTags(tags);
+
+
+  UDPHeader *udp = new UDPHeader (GetClassifierParameters ()->GetSourcePort (),
+		                          GetClassifierParameters ()->GetDestinationPort ());
+  packet->AddUDPHeader (udp);
+
+  IPHeader *ip = new IPHeader (GetClassifierParameters ()->GetSourceID (),
+                               GetClassifierParameters ()->GetDestinationID ());
+  packet->AddIPHeader (ip);
+
+  PDCPHeader *pdcp = new PDCPHeader ();
+  packet->AddPDCPHeader (pdcp);
+
+  GetRadioBearer()->Enqueue (packet);
+}
+
+void
 WEB::Send (void)
 {
   if (!m_stateON)

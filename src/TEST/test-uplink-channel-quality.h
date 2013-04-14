@@ -164,7 +164,7 @@ static void TestUplinkChannelQuality ()
 
 	  ue->GetPhy ()->GetDlChannel ()->AddDevice (ue);
 
-	  /*
+	  
 	  double startTime = (double)(rand() %1); //s
 	  double stopTime =  (double)(rand() %2);  //s
 	  QoSParameters *qos = new QoSParameters ();
@@ -174,7 +174,7 @@ static void TestUplinkChannelQuality ()
 														 Application::APPLICATION_TYPE_INFINITE_BUFFER,
 														 qos,
 														 startTime, stopTime);
-	  */
+	  
 	  idUe++;
 	  applicationID++;
 	  dstPort++;

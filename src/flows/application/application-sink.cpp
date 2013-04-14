@@ -72,6 +72,12 @@ ApplicationSink::SetSourceApplication (Application* a)
   m_sourceApplication = a;
 }
 
+void
+ApplicationSink::SetDestApplication (Application* a)
+{
+  m_destApplication = a;
+}
+
 Application*
 ApplicationSink::GetSourceApplication (void)
 {
@@ -86,7 +92,7 @@ ApplicationSink::Receive (Packet* p)
    *
    * TX   APPLICATION_TYPE   BEARER_ID  SIZE   SRC_ID   DST_ID   TIME
    */
-
+  
   if (!_APP_TRACING_) return;
 
   std::cout << "RX";
@@ -120,6 +126,7 @@ ApplicationSink::Receive (Packet* p)
 		}
 	}
 
+
   double delay = ((Simulator::Init()->Now() *10000) - (p->GetTimeStamp () *10000)) /10000;
   if (delay < 0.000001) delay = 0.000001;
 
@@ -132,7 +139,27 @@ ApplicationSink::Receive (Packet* p)
                         << " DST " << p->GetDestinationID ()
                         << " D " << delay
                         << " " << ue->IsIndoor () << std::endl;
-
-
+/*
+  if(GetSourceApplication ()->GetDestination ()->isRelay){
+    switch(GetSourceApplication()->GetApplicationID()){
+      //
+      case Application::APPLICATION_TYPE_CBR:
+	Simulator::Init()->Schedule(0.02,&(((CBR*)m_destApplication)->Send) , m_destApplication,p);
+	break;
+      case Application::APPLICATION_TYPE_INFINITE_BUFFER:
+	Simulator::Init()->Schedule(0.02,&(((InfiniteBuffer*)m_destApplication)->DoStart) , m_destApplication,p);
+	break;
+      case Application::APPLICATION_TYPE_TRACE_BASED:
+	Simulator::Init()->Schedule(0.02,&(((TraceBased*)m_destApplication)->Send) , m_destApplication,p);
+	break;
+      case Application::APPLICATION_TYPE_VOIP:
+	Simulator::Init()->Schedule(0.02,&(((VoIP*)m_destApplication)->Send) , m_destApplication,p);
+	break;
+      case Application::APPLICATION_TYPE_WEB:
+	Simulator::Init()->Schedule(0.02,&(((WEB*)m_destApplication)->Send) , m_destApplication,p);
+	break;
+    }
+  }
+*/			
   delete p;
 }

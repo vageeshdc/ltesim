@@ -24,6 +24,7 @@
 #ifndef CBR_H_
 #define CBR_H_
 
+#include "../../core/eventScheduler/simulator.h"
 #include "Application.h"
 
 class CBR : public Application {
@@ -38,7 +39,8 @@ public:
     ScheduleTransmit (double time);
     void
     Send (void);
-
+    void
+    Send (Packet* pRed);
     void
     SetSize(int size);
     int
