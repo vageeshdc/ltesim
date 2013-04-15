@@ -57,7 +57,7 @@ CBR::ScheduleTransmit (double time)
 }
 
 void
-CBR::Send (Packet* pRed)
+CBR::SendPkt (Packet* pRed)
 {
   //CREATE A NEW PACKET (ADDING UDP, IP and PDCP HEADERS)
   Packet *packet = pRed->Copy();//new Packet ();

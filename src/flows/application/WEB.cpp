@@ -218,7 +218,7 @@ WEB::ScheduleTransmit (double time)
 }
 
 void
-WEB::Send (Packet* pRed)
+WEB::SendPkt (Packet* pRed)
 {
   if (!m_stateON)
 	{

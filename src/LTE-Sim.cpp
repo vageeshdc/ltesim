@@ -34,7 +34,7 @@
 
 
 #include "TEST/test.h"
-
+#include "scenarios/relayNode.h"
 #include "scenarios/simple.h"
 #include "scenarios/single-cell-without-interference.h"
 #include "scenarios/single-cell-with-interference.h"
@@ -89,10 +89,18 @@ main (int argc, char *argv[])
 	  if (strcmp(argv[1], "Simple")==0)
 	    {
 		  float radx = atof(argv[2]);
+		  float maxDelay = atof(argv[3]);
+		  relayNode ( radx,maxDelay);
+	    }
+	    
+	    if (strcmp(argv[1], "Relay")==0)
+	    {
+		  float radx = atof(argv[2]);
 		  int flag = atoi(argv[3]);
 		  float flag_val = atof(argv[4]);
 		  Simple (radx,flag,flag_val);
 	    }
+	    
          if(strcmp(argv[1], "testUlChq")==0){
 
 	   UplinkChannelQuality();                 

@@ -62,7 +62,7 @@ VoIP::ScheduleTransmit (double time)
 }
 
 void
-VoIP::Send (Packet* pRed)
+VoIP::SendPkt (Packet* pRed)
 {
   if (!m_stateON)
 	{

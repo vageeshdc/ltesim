@@ -35,7 +35,7 @@ public:
 
     void ScheduleTransmit (double time);
     void Send (void);
-    void Send (Packet* pRed);
+    void SendPkt (Packet* pRed);
     int GetSize (void) const;
 
 

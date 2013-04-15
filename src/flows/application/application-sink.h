@@ -31,6 +31,7 @@
 #include "TraceBased.h"
 #include "WEB.h"
 #include "CBR.h"
+#include "../../core/eventScheduler/simulator.h"
 
 class ClassifierParameters;
 class RadioBearer;

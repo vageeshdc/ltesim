@@ -40,7 +40,7 @@ public:
     void
     Send (void);
     void
-    Send (Packet* pRed);
+    SendPkt (Packet* pRed);
     void
     SetSize(int size);
     int
