@@ -196,7 +196,7 @@ Application::Start ()
 		  << m_radioBearer->GetDestination () ->GetIDNetworkNode ()<< std::endl;
 #endif
 
-  if(GetDestination()->isRelay){
+  if(GetSource()->isRelay){
   
   }else{
     DoStart ();

@@ -154,6 +154,7 @@ ApplicationSink::Receive (Packet* p)
 	//break;
       case Application::APPLICATION_TYPE_VOIP:
 	Simulator::Init()->Schedule(0.01,&VoIP::SendPkt ,(VoIP*) m_destApplication,p);
+	std::cout<<"Relaying";
 	break;
       case Application::APPLICATION_TYPE_WEB:
 	Simulator::Init()->Schedule(0.01,&WEB::SendPkt , (WEB*)m_destApplication,p);
