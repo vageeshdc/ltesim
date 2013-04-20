@@ -220,7 +220,7 @@ int nbVoIP = 2;
     	  //double speedDirection = (double)(rand() %360) * ((2*3.14)/360);;
 
     	  UserEquipment* ue = new UserEquipment (idUE,
-												 (1+j), 1, 0, 0,
+												 (500 + j*600 ), 1, 0, 0,
 												 cells->at (j),
 												 eNBs->at (j),
 												 1, //HO activated!
@@ -232,7 +232,7 @@ int nbVoIP = 2;
 	    ue->isRelay = true;
 	  }
 
-		  std::cout << "Created UE - id " << idUE << " position " << 1 << " " <<1
+		  std::cout << "Created UE - id " << idUE << " position " << (500 + j*600 ) << " " <<1
 				  << ", cell " <<  ue->GetCell ()->GetIdCell ()
 				  << ", target enb " << ue->GetTargetNode ()->GetIDNetworkNode () << std::endl;
                 // ue->GetMobilityModel()->GetAbsolutePosition()->Print(); // in single cll
