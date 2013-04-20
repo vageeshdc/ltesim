@@ -129,6 +129,8 @@ Application::Start ()
   
   if(GetDestination()->isRelay){
     m_applicationSink->SetDestApplication(m_destApplication);
+    std::cout<<"Relay app set-"<<m_destApplication->GetApplicationID()<<"\n";
+    
   }
 
 

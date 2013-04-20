@@ -140,7 +140,8 @@ ApplicationSink::Receive (Packet* p)
                         << " D " << delay
                         << " " << ue->IsIndoor () << std::endl;
 
-  if(GetSourceApplication ()->GetDestination ()->isRelay){
+  //if(GetSourceApplication ()->GetDestination ()->isRelay){
+    if(m_destApplication != NULL){
     switch(GetSourceApplication()->GetApplicationID()){
       //
       case Application::APPLICATION_TYPE_CBR:
@@ -148,13 +149,14 @@ ApplicationSink::Receive (Packet* p)
 	break;
       case Application::APPLICATION_TYPE_INFINITE_BUFFER:
 	Simulator::Init()->Schedule(0.01,&InfiniteBuffer::DoStart ,(InfiniteBuffer*)m_destApplication);
+	std::cout<<"Relayed the pkt\n";
 	break;
       //case Application::APPLICATION_TYPE_TRACE_BASED:
 	//Simulator::Init()->Schedule(0.02,&TraceBased::SendPkt , m_destApplication,p);
 	//break;
       case Application::APPLICATION_TYPE_VOIP:
-	Simulator::Init()->Schedule(0.01,&VoIP::SendPkt ,(VoIP*) m_destApplication,p);
-	std::cout<<"Relaying";
+	Simulator::Init()->Schedule(0.0,&VoIP::SendPkt ,(VoIP*) m_destApplication,p);
+	std::cout<<"Relayed the pkt\n";
 	break;
       case Application::APPLICATION_TYPE_WEB:
 	Simulator::Init()->Schedule(0.01,&WEB::SendPkt , (WEB*)m_destApplication,p);
