@@ -50,6 +50,7 @@
 #include <cstring>
 
 
+<<<<<<< HEAD
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2010,2011,2012 TELEMATICS LAB, Politecnico di Bari
@@ -99,6 +100,8 @@
 #include <stdlib.h>
 #include <cstring>
 
+=======
+>>>>>>> b31304a4442d583ca35ce7a899bd12f6fd233a9c
 
 static void relayNode ( double radius,
                        double maxDelay)
@@ -121,7 +124,11 @@ static void relayNode ( double radius,
 
   // CONFIGURE SEED
   if (seed >= 0)
+<<<<<<< HEAD
 	{
+=======
+  {
+>>>>>>> b31304a4442d583ca35ce7a899bd12f6fd233a9c
 	  int commonSeed = GetCommonSeed (seed);
 	  srand (commonSeed);
 	}
@@ -198,6 +205,7 @@ static void relayNode ( double radius,
   std::vector <ENodeB*> *eNBs = new std::vector <ENodeB*>;
   for (int i = 0; i < nbCell; i++)
     {
+<<<<<<< HEAD
 	  ENodeB* enb;
 	  
 	  if(i == 0){
@@ -214,6 +222,19 @@ static void relayNode ( double radius,
 	  enb->GetPhy ()->SetUlChannel (ulChannels->at (i));
 	  enb->GetPhy ()->SetBandwidthManager (spectrums.at (i));
 	  
+=======
+	  ENodeB* enb = new ENodeB (i, cells->at (i));
+	  enb->GetPhy ()->SetDlChannel (dlChannels->at (i));
+	  enb->GetPhy ()->SetUlChannel (ulChannels->at (i));
+	  enb->GetPhy ()->SetBandwidthManager (spectrums.at (i));
+	  
+	  if(i == 0){
+	    enb->isRelay = true;
+	  }
+	  else{
+	    enb->isRelay = false;
+	  }
+>>>>>>> b31304a4442d583ca35ce7a899bd12f6fd233a9c
 	  enb->SetULScheduler (uplink_scheduler_type);   // added UL
 	  enb->SetDLScheduler (ENodeB::DLScheduler_TYPE_PROPORTIONAL_FAIR); // setted by default
       
@@ -274,7 +295,11 @@ int nbVoIP = 2;
     	  //double speedDirection = (double)(rand() %360) * ((2*3.14)/360);;
 
     	  UserEquipment* ue = new UserEquipment (idUE,
+<<<<<<< HEAD
 												 (1+j), 1, 0, 0,
+=======
+												 (500 + j*600 ), 1, 0, 0,
+>>>>>>> b31304a4442d583ca35ce7a899bd12f6fd233a9c
 												 cells->at (j),
 												 eNBs->at (j),
 												 1, //HO activated!
@@ -286,7 +311,11 @@ int nbVoIP = 2;
 	    ue->isRelay = true;
 	  }
 
+<<<<<<< HEAD
 		  std::cout << "Created UE - id " << idUE << " position " << 1 << " " <<1
+=======
+		  std::cout << "Created UE - id " << idUE << " position " << (500 + j*600 ) << " " <<1
+>>>>>>> b31304a4442d583ca35ce7a899bd12f6fd233a9c
 				  << ", cell " <<  ue->GetCell ()->GetIdCell ()
 				  << ", target enb " << ue->GetTargetNode ()->GetIDNetworkNode () << std::endl;
                 // ue->GetMobilityModel()->GetAbsolutePosition()->Print(); // in single cll
@@ -310,7 +339,10 @@ int nbVoIP = 2;
 		  // register ue to the enb
 		  eNBs->at (j)->RegisterUserEquipment (ue);
 
+<<<<<<< HEAD
 		  
+=======
+>>>>>>> b31304a4442d583ca35ce7a899bd12f6fd233a9c
 		  // define the channel realization
 		  MacroCellUrbanAreaChannelRealization* c_dl = new MacroCellUrbanAreaChannelRealization (eNBs->at (j), ue);
 		  c_dl->SetChannelType (ChannelRealization::CHANNEL_TYPE_PED_A);

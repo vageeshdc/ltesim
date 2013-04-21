@@ -140,8 +140,8 @@ ApplicationSink::Receive (Packet* p)
                         << " D " << delay
                         << " " << ue->IsIndoor () << std::endl;
 
-  //if(GetSourceApplication ()->GetDestination ()->isRelay){
-    if(m_destApplication != NULL){
+  if(GetSourceApplication ()->GetDestination ()->isRelay){
+    
     switch(GetSourceApplication()->GetApplicationID()){
       //
       case Application::APPLICATION_TYPE_CBR:
