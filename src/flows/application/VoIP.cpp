@@ -57,7 +57,54 @@ VoIP::ScheduleTransmit (double time)
 {
   if ( (Simulator::Init()->Now () + time) < GetStopTime () )
     {
-      Simulator::Init()->Schedule(time, &VoIP::Send, this);
+      
+      //Simulator::Init()->Schedule(time, &VoIP::Send, this);
+      
+      double currentTime = Simulator::Init()->Now ();
+      double timePrimeI,timePrimeF;
+      
+      double ttim = (1/alfTime)*(currentTime+time);
+      
+	while((( ((int)ttim) % totalFrames) >= alfStartFrame) && (( ((int)ttim) % totalFrames) <= alfEndFrame)){
+	  ttim += alfStep;
+	}
+	timePrimeI  = ((ttim*alfTime - currentTime) > time)?(ttim*alfTime - currentTime):time;
+	std::cout<<"The time value I "<<timePrimeI<<" at "<< ttim*alfTime<<"\n";
+	
+      ttim = (1/alfTime)*(currentTime+time);
+      
+      //if((alfStartFrame == 0) &&(alfEndFrame == totalFrames-1))
+      //{
+	//do nothing
+      //}else{
+	while((( ((int)ttim) % totalFrames) < alfStartFrame) || (( ((int)ttim) % totalFrames) > alfEndFrame)){
+	  ttim += alfStep;
+	}
+      //}
+	timePrimeF  = ((ttim*alfTime - currentTime) > time)?(ttim*alfTime - currentTime):time;
+	std::cout<<"The time value F "<<timePrimeF<<" at "<< ttim*alfTime<<"\n";
+      
+      if(GetSource()->GetNodeType() == NetworkNode::TYPE_PICO){
+	//delay to certian alpha
+	
+	Simulator::Init()->Schedule(timePrimeF, &VoIP::Send, this);
+      }
+      else if(GetSource()->GetNodeType() == NetworkNode::TYPE_UE){
+	//delay here again!!
+	if(((UserEquipment*)GetSource())->GetTargetNode()->GetNodeType() == NetworkNode::TYPE_PICO){
+	  
+	  Simulator::Init()->Schedule(timePrimeF, &VoIP::Send, this);
+	  
+	}
+	else{
+	  Simulator::Init()->Schedule(timePrimeI, &VoIP::Send, this);
+	}
+	
+      }
+      else{
+	Simulator::Init()->Schedule(timePrimeI, &VoIP::Send, this);
+      }
+      
     }
 }
 
