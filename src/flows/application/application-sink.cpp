@@ -140,26 +140,55 @@ ApplicationSink::Receive (Packet* p)
                         << " D " << delay
                         << " " << ue->IsIndoor () << std::endl;
 
+
+			
+  
+      double currentTime = Simulator::Init()->Now ();
+      double timePrimeI,timePrimeF;
+      
+      double ttim = (1/m_sourceApplication->alfTime)*(currentTime);
+      /*
+	while((( ((int)ttim) % totalFrames) >= m_sourceApplication->alfStartFrame) && (( ((int)ttim) % totalFrames) <= alfEndFrame)){
+	  ttim += alfStep;
+	}
+	timePrimeI  = ((ttim*alfTime - currentTime) > time)?(ttim*alfTime - currentTime):time;
+	std::cout<<"The time value I "<<timePrimeI<<" at "<< ttim*alfTime<<"\n";
+	
+      ttim = (1/alfTime)*(currentTime+time);
+      */
+      //if((alfStartFrame == 0) &&(alfEndFrame == totalFrames-1))
+      //{
+	//do nothing
+      //}else{
+	while((( ((int)ttim) % m_sourceApplication->totalFrames) < m_sourceApplication->alfStartFrame) || 
+	     (( ((int)ttim) % m_sourceApplication->totalFrames) > m_sourceApplication->alfEndFrame)){
+	  ttim += m_sourceApplication->alfStep;
+	}
+      //}
+	timePrimeF  = ((ttim*m_sourceApplication->alfTime - currentTime) > 0)?(ttim*m_sourceApplication->alfTime - currentTime):0;
+	std::cout<<"The time value F "<<timePrimeF<<" at "<< ttim*m_sourceApplication->alfTime<<"\n";
+      
+			
   if(GetSourceApplication ()->GetDestination ()->isRelay){
     
     switch(GetSourceApplication()->GetApplicationID()){
       //
       case Application::APPLICATION_TYPE_CBR:
-	Simulator::Init()->Schedule(0.01,&CBR::SendPkt , (CBR*)m_destApplication,p);
+	Simulator::Init()->Schedule(timePrimeF,&CBR::SendPkt , (CBR*)m_destApplication,p);
 	break;
       case Application::APPLICATION_TYPE_INFINITE_BUFFER:
-	Simulator::Init()->Schedule(0.01,&InfiniteBuffer::DoStart ,(InfiniteBuffer*)m_destApplication);
+	Simulator::Init()->Schedule(timePrimeF,&InfiniteBuffer::DoStart ,(InfiniteBuffer*)m_destApplication);
 	std::cout<<"Relayed the pkt\n";
 	break;
       //case Application::APPLICATION_TYPE_TRACE_BASED:
 	//Simulator::Init()->Schedule(0.02,&TraceBased::SendPkt , m_destApplication,p);
 	//break;
       case Application::APPLICATION_TYPE_VOIP:
-	Simulator::Init()->Schedule(0.0,&VoIP::SendPkt ,(VoIP*) m_destApplication,p);
+	Simulator::Init()->Schedule(timePrimeF,&VoIP::SendPkt ,(VoIP*) m_destApplication,p);
 	std::cout<<"Relayed the pkt\n";
 	break;
       case Application::APPLICATION_TYPE_WEB:
-	Simulator::Init()->Schedule(0.01,&WEB::SendPkt , (WEB*)m_destApplication,p);
+	Simulator::Init()->Schedule(timePrimeF,&WEB::SendPkt , (WEB*)m_destApplication,p);
 	break;
     }
   }
