@@ -52,6 +52,12 @@ public:
 	    APPLICATION_TYPE_CBR,
 	    APPLICATION_TYPE_WEB
 	  };
+	  
+	  double alfTime;//time per frame -- 1ms
+	int alfStep;//delta steps in frames to look -- 3
+	int totalFrames;// frames in total -- 10
+	int alfStartFrame;//start frame interference time frame  -- 3
+	int alfEndFrame;//defines the end of interference time frame -- 5
 
 	Application();
 	Application(ApplicationType applicationType);
@@ -104,6 +110,7 @@ public:
 	void Print (void);
 
 private:
+  
 	ApplicationType m_applicationType;
 
 	Application* m_destApplication;
