@@ -36,6 +36,12 @@
 
 Application::Application()
 {
+  alfTime = 0.001;
+  alfStep = 3;//delt
+  totalFrames = 10;//
+  alfStartFrame = 1;
+  alfEndFrame = 8;//
+  
   m_classifierParameters = NULL;
   m_qosParameters = NULL;
   m_source = NULL;
@@ -60,6 +66,12 @@ Application::Destroy (void)
 Application::Application(ApplicationType applicationType)
 {
   m_applicationType = applicationType;
+  
+  alfTime = 0.001;
+  alfStep = 3;//delt
+  totalFrames = 10;//
+  alfStartFrame = 2;
+  alfEndFrame = 8;//
 }
 
 Application::~Application()
